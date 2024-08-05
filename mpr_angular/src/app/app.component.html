@@ -1,0 +1,43 @@
+<div *ngIf="!isAdminLoggedIn && !isCustomerLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex" class="custom-navbar">
+    <div class="navbar-title">
+      <a routerLink="/login">Mobile Prepaid Recharge</a>
+    </div>
+
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/register" routerLinkActive="active">Sign Up</a>
+      <a nz-button nzType="link" routerLink="/login" routerLinkActive="active">Login</a>
+    </div>
+
+  </nz-header>
+</div>
+
+<div *ngIf="isAdminLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex" class="custom-navbar">
+    <div class="navbar-title">
+      <a routerLink="/login">Welcome, Admin</a>
+    </div>
+
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</a>
+      <a nz-button nzType="link" (click)="logout()" routerLinkActive="active">Logout</a>
+    </div>
+
+  </nz-header>
+</div>
+
+<div *ngIf="isCustomerLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex" class="custom-navbar">
+    <div class="navbar-title">
+      <h5>Welcome, User</h5>
+    </div>
+
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/customer/dashboard" routerLinkActive="active">Dashboard</a>
+      <a nz-button nzType="link" (click)="logout()" routerLinkActive="active">Logout</a>
+    </div>
+
+  </nz-header>
+</div>
+
+<router-outlet></router-outlet>
