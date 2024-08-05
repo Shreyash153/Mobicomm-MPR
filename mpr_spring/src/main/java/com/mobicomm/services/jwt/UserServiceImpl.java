@@ -6,10 +6,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.mobicomm.repository.UserRepository;
-import lombok.RequiredArgsConstructor;
+// import lombok.RequiredArgsConstructor;
 
 @Service
-@RequiredArgsConstructor
+// @RequiredArgsConstructor
 public class UserServiceImpl implements UserService{
 	
 	private final UserRepository userRepository;

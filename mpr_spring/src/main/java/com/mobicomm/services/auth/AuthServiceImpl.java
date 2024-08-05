@@ -12,10 +12,10 @@ import com.mobicomm.enums.UserRole;
 import com.mobicomm.repository.UserRepository;
 
 import jakarta.annotation.PostConstruct;
-import lombok.RequiredArgsConstructor;
+// import lombok.RequiredArgsConstructor;
 
 @Service
-@RequiredArgsConstructor
+// @RequiredArgsConstructor
 public class AuthServiceImpl implements AuthService{
 
 	private final UserRepository userRepository;

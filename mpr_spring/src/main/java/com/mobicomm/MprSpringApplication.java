@@ -14,3 +14,4 @@ public class MprSpringApplication {
 }
 
 //check port status- netstat -ano | findstr :8080
+//stop process-   taskkill /PID [PID] /F
